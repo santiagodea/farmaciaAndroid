@@ -1,7 +1,10 @@
 package ar.com.ciu.pharmapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class PharmApp extends AppCompatActivity {
 
@@ -9,5 +12,17 @@ public class PharmApp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharm_app);
+
+
+        Button botonIrAListaDeFarmacias = this.findViewById(R.id.listaFarmacias);
+        botonIrAListaDeFarmacias.setOnClickListener((View v) -> {
+            this.irAListaDeFarmacias();
+        });
+    }
+
+
+    public void irAListaDeFarmacias() {
+        Intent intent = new Intent(this, PharmacyList.class);
+        startActivity(intent);
     }
 }

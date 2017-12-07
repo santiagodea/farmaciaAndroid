@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context="ar.com.ciu.pharmapp.PharmacyList">
 
+    <TextView
+        android:id="@+id/listaFarmacias.paisLabel"
+        android:layout_width="200dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/farmacias"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listaDeFarmacias"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaFarmacias.paisLabel" />
+    />
 </android.support.constraint.ConstraintLayout>
