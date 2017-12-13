@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PharmApp</string>
     <string name="farmacias">Farmacias</string>
+    <string name="title_activity_turnos">Turnos</string>
 </resources>

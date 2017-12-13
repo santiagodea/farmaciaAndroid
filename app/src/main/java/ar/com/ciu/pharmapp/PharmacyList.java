@@ -19,7 +19,7 @@ public class PharmacyList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy_list);
 
-
+/*
         this.listView = this.findViewById(R.id.listaFarmacias);
 
         PharmacyList.PharmacyDataProvider.api().fetchPharmacyList((data) -> {
@@ -45,7 +45,7 @@ public class PharmacyList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
     }
     public ListaDeFarmaciasAdapter listAdapter() {
         return this.listAdapter;
