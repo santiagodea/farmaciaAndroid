@@ -29,8 +29,8 @@ public class ApiPharmacyDataAnalizer {
     }
 
     public PharmacyDataObject buildPharmacyDataObject() {
-        try {
-            String code = this.getString("alpha3Code");  // este tiene que estar
+       // try {
+            //String code = this.getString("alpha3Code");  // este tiene que estar
             String name = "";
             try {
                 name = this.rawData.getString("name");
@@ -57,9 +57,9 @@ public class ApiPharmacyDataAnalizer {
                 // nothing to do
             }
             return new PharmacyDataObject(name, address, landPhone, alternativePhone);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
+       // } catch (JSONException e) {
+          //  e.printStackTrace();
+          //  return null;
+        //}
     }
 }

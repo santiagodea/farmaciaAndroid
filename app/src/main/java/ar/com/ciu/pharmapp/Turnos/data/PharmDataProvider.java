@@ -1,9 +1,7 @@
-package ar.com.ciu.pharmapp.Turnos;
+package ar.com.ciu.pharmapp.Turnos.data;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -16,8 +14,8 @@ import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 public class PharmDataProvider {
 
-    public void fetchDateIndex(int desplazamiento, PharmAccept theFunction) {
-        String url =  "http://192.168.10.189:8080/api/index/" + desplazamiento;
+    public static void fetchDateIndex(int desplazamiento, PharmAccept theFunction) {
+        String url =  "http://192.168.0.107:8080/farmacia/api/index/" + desplazamiento;
         JsonObjectRequest jsObjectRequest = new JsonObjectRequest
                 (url, null, new Response.Listener<JSONObject>() {
                     @Override

@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.Turnos;
+package ar.com.ciu.pharmapp.Turnos.data;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -6,7 +6,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
 import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyListAnalizer;
 
 /**
@@ -48,6 +47,8 @@ public class PharmDataAnalyzer {
             }
             result.setShiftPharmacys(listPharmacys);*/
 
+
+
             ApiPharmacyListAnalizer pharmListAnalizer = new ApiPharmacyListAnalizer(pharmacysDataArray);
             result.setShiftPharmacys(pharmListAnalizer.getSouthAmericaCountryList());
 
@@ -64,6 +65,8 @@ public class PharmDataAnalyzer {
                  );
             }
             result.setEventData(listEvents);
+
+
 
             return result;
         }

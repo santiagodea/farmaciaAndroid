@@ -1,7 +1,5 @@
-package ar.com.ciu.pharmapp.Turnos;
+package ar.com.ciu.pharmapp.Turnos.data;
 
-import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;

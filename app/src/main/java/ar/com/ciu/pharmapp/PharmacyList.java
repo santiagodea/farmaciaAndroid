@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import ar.com.ciu.pharmapp.PharmacyListPack.ListaDeFarmaciasAdapter;
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyData;
+import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
 
 public class PharmacyList extends AppCompatActivity {
     private ListView listView;
