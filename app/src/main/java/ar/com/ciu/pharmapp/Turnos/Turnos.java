@@ -1,7 +1,10 @@
 package ar.com.ciu.pharmapp.Turnos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,10 +23,14 @@ public class Turnos extends AppCompatActivity {
 
         int offset = 0;
 
+        Intent in = getIntent();
+        if(in.hasExtra("offset")){
+            offset = Integer.parseInt(in.getStringExtra("offset"));
+        }
+
         TextView date = this.findViewById(R.id.fecha);
         ListView pharmacys = this.findViewById(R.id.listaDeFarmacias);
         ListView events = this.findViewById(R.id.listaDeEventos);
-
 
 
         PharmDataProvider.fetchDateIndex(offset,(data) -> {
@@ -32,6 +39,27 @@ public class Turnos extends AppCompatActivity {
             PharmacyAdapter pa = new PharmacyAdapter(this,data.getShiftPharmacys());
             pharmacys.setAdapter(pa);
 
+            EventAdapter ea = new EventAdapter(this,data.getEventData());
+            events.setAdapter(ea);
+
+        });
+
+        Button back = this.findViewById(R.id.anterior);
+        Button next = this.findViewById(R.id.Siguiente);
+
+        //este final me lo pidio....
+        int finalOffset = offset;
+
+        back.setOnClickListener((View v) -> {
+            Intent intent = new Intent(this, Turnos.class);
+            intent.putExtra("offset", String.valueOf(finalOffset -1));
+            startActivity(intent);
+        });
+
+        next.setOnClickListener((View v) -> {
+            Intent intent = new Intent(this, Turnos.class);
+            intent.putExtra("offset", String.valueOf(finalOffset +1));
+            startActivity(intent);
         });
     }
 }
