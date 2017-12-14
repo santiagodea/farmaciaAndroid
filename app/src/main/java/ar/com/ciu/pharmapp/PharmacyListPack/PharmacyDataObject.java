@@ -1,5 +1,7 @@
 package ar.com.ciu.pharmapp.PharmacyListPack;
 
+import android.util.Log;
+
 /**
  * Created by santi on 6/12/2017.
  */

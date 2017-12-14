@@ -46,7 +46,7 @@ public class ApiPharmacyDataAnalizer {
             }
             Integer landPhone = 0;
             try {
-                landPhone = this.rawData.getInt("landPhone");
+                landPhone = this.rawData.getInt("landphone");
             } catch (JSONException e) {
                 // nothing to do
             }
