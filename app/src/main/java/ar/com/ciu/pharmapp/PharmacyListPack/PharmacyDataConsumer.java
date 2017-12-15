@@ -5,5 +5,5 @@ package ar.com.ciu.pharmapp.PharmacyListPack;
  */
 
 public interface PharmacyDataConsumer {
-    public void accept(PharmacyDataConsumer data);
+    public void accept(PharmacyDataObject data);
 }

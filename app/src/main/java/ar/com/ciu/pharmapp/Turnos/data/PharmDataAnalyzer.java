@@ -50,7 +50,7 @@ public class PharmDataAnalyzer {
 
 
             ApiPharmacyListAnalizer pharmListAnalizer = new ApiPharmacyListAnalizer(pharmacysDataArray);
-            result.setShiftPharmacys(pharmListAnalizer.getSouthAmericaCountryList());
+            result.setShiftPharmacys(pharmListAnalizer.getPharmacyList());
 
             //Lista de eventos
             ArrayList<EventDataObject> listEvents = new ArrayList<>();

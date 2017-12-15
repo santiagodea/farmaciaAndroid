@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import ar.com.ciu.pharmapp.PharmacyListPack.ListaDeFarmaciasAdapter;
 import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
+import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataProvider;
 
 public class PharmacyList extends AppCompatActivity {
     private ListView listView;
@@ -19,10 +20,10 @@ public class PharmacyList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy_list);
 
-/*
-        this.listView = this.findViewById(R.id.listaFarmacias);
 
-        PharmacyList.PharmacyDataProvider.api().fetchPharmacyList((data) -> {
+        listView = this.findViewById(R.id.listaDeFarmacias);
+
+        PharmacyDataProvider.api().fetchPharmacyList((data) -> {
             this.listAdapter = new ListaDeFarmaciasAdapter(this, data);
             this.listView.setAdapter(this.listAdapter);
         });
@@ -36,16 +37,19 @@ public class PharmacyList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // obtengo el objeto a partir de la posicion, OJO hay que pedirselo al listAdapter
                 // ListaDePaisesActivity.this es el "this de afuera"
-               PharmacyData selectedData = ListaDeFarmaciasActivity.this.listAdapter.getItem(position);
+               PharmacyDataObject selectedData = PharmacyList.this.listAdapter.getItem(position);
 
                 // salto a otra Activity
-                Intent intent = new Intent(ListaDeFarmaciasActivity.this, DetalleDeFarmaciActivity.class);
-                intent.putExtra("countryName", selectedData.getSpanishName());
-                intent.putExtra("countryCode", selectedData.getCode());
+                Intent intent = new Intent(PharmacyList.this, Pharmacy.class);
+                intent.putExtra("name", selectedData.getName());
+                intent.putExtra("address", selectedData.getAddress());
+                intent.putExtra("landPhone", selectedData.getLandphone());
+                intent.putExtra("alternativePhone", selectedData.getAlternativePhone());
+
                 startActivity(intent);
             }
         });
-*/
+
     }
     public ListaDeFarmaciasAdapter listAdapter() {
         return this.listAdapter;

@@ -7,5 +7,5 @@ import java.util.List;
  */
 
 public interface PharmacyListConsumer {
-    public void accept(List<PharmacyDataConsumer> data);
+    public void accept(List<PharmacyDataObject> data);
 }

@@ -23,10 +23,7 @@ public class ApiPharmacyListAnalizer {
         this.rawData = _rawData;
     }
 
-    public List<PharmacyDataObject> getSouthAmericaCountryList() {
-        this.checkData();
-        return this.processedData;
-    }
+
 
     private void doProcessData() {
         this.processedData = new ArrayList<>();
@@ -48,4 +45,8 @@ public class ApiPharmacyListAnalizer {
         if (this.processedData == null) { this.doProcessData(); }
     }
 
+    public List<PharmacyDataObject> getPharmacyList() {
+        this.checkData();
+        return this.processedData;
+    }
 }
