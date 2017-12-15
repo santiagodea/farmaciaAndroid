@@ -44,7 +44,7 @@ public class ApiPharmacyDataProvider extends PharmacyDataProvider {
 
     @Override
     public void fetchPharmacyData(String pharmacyName, PharmacyDataConsumer theFunction) {
-        String url = "https://agile-falls-22343.herokuapp.com/api/farmacia/ + pharmacyName";
+        String url = "https://agile-falls-22343.herokuapp.com/api/farmacia/" + pharmacyName;
         JsonObjectRequest jsObjectRequest = new JsonObjectRequest
                 (url, null, new Response.Listener<JSONObject>() {
                     @Override

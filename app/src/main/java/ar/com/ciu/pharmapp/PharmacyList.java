@@ -10,6 +10,7 @@ import android.widget.ListView;
 import ar.com.ciu.pharmapp.PharmacyListPack.ListaDeFarmaciasAdapter;
 import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
 import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataProvider;
+import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 public class PharmacyList extends AppCompatActivity {
     private ListView listView;
@@ -19,7 +20,7 @@ public class PharmacyList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy_list);
-
+        ApplicationToolset.setContext(this);
 
         listView = this.findViewById(R.id.listaDeFarmacias);
 
@@ -43,8 +44,8 @@ public class PharmacyList extends AppCompatActivity {
                 Intent intent = new Intent(PharmacyList.this, Pharmacy.class);
                 intent.putExtra("name", selectedData.getName());
                 intent.putExtra("address", selectedData.getAddress());
-                intent.putExtra("landPhone", selectedData.getLandphone());
-                intent.putExtra("alternativePhone", selectedData.getAlternativePhone());
+                intent.putExtra("landPhone", String.valueOf(selectedData.getLandphone()));
+                intent.putExtra("alternativePhone", String.valueOf(selectedData.getAlternativePhone()));
 
                 startActivity(intent);
             }

@@ -18,9 +18,7 @@ public class PharmacyDataObject {
         this.alternativePhone = alternativePhone;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() {return name;}
     public String getAddress() {
         return address;
     }

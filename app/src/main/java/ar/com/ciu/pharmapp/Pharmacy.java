@@ -7,18 +7,20 @@ import android.widget.TextView;
 
 import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataProvider;
 import ar.com.ciu.pharmapp.Turnos.data.PharmDataProvider;
+import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 public class Pharmacy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationToolset.setContext(this);
         setContentView(R.layout.activity_pharmacy);
 
         Intent intent = this.getIntent();
         String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("address");
-        String landPhone = intent.getStringExtra("landPhone");
+        String landPhone = intent.getStringExtra("landphone");
         String alternativePhone = intent.getStringExtra("alternativePhone");
 
 
