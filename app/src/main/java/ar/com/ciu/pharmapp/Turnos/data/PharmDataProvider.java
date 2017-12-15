@@ -15,7 +15,7 @@ import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 public class PharmDataProvider {
 
     public static void fetchDateIndex(int desplazamiento, PharmAccept theFunction) {
-        String url =  "http://192.168.0.107:8080/farmacia/api/index/" + desplazamiento;
+        String url =  "https://agile-falls-22343.herokuapp.com/api/index/" + desplazamiento;
         JsonObjectRequest jsObjectRequest = new JsonObjectRequest
                 (url, null, new Response.Listener<JSONObject>() {
                     @Override
