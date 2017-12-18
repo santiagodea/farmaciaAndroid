@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ar.com.ciu.pharmapp.PharmacyList">
+    tools:context="ar.com.ciu.pharmapp.activitys.PharmacyList">
 
     <TextView
         android:id="@+id/listaFarmacias.paisLabel"

@@ -1,4 +1,6 @@
-package ar.com.ciu.pharmapp.Turnos.data;
+package ar.com.ciu.pharmapp.data.InterfacesConsumer;
+
+import ar.com.ciu.pharmapp.data.dataObjects.IndexDataObject;
 
 /**
  * Created by ramiro on 12/12/17.

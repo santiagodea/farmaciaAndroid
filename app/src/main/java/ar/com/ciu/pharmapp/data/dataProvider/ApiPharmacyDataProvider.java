@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.PharmacyListPack;
+package ar.com.ciu.pharmapp.data.dataProvider;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -9,10 +9,10 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyDataAnalizer;
-import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyListAnalizer;
-import ar.com.ciu.pharmapp.Turnos.data.PharmAccept;
-import ar.com.ciu.pharmapp.Turnos.data.PharmDataAnalyzer;
+import ar.com.ciu.pharmapp.data.InterfacesConsumer.PharmacyDataConsumer;
+import ar.com.ciu.pharmapp.data.InterfacesConsumer.PharmacyListConsumer;
+import ar.com.ciu.pharmapp.data.analizer.ApiPharmacyDataAnalizer;
+import ar.com.ciu.pharmapp.data.analizer.ApiPharmacyListAnalizer;
 import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 /**

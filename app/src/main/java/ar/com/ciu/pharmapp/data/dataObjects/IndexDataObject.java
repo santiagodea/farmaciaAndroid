@@ -1,8 +1,6 @@
-package ar.com.ciu.pharmapp.Turnos.data;
+package ar.com.ciu.pharmapp.data.dataObjects;
 
 import java.util.List;
-
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
 
 /**
  * Created by ramiro on 12/12/17.

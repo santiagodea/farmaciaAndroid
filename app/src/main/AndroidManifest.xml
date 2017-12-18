@@ -11,16 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PharmApp">
+        <activity android:name=".activitys.PharmApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PharmacyList" />
-        <activity android:name=".Pharmacy" />
-        <activity android:name=".Turnos.Turnos"></activity>
+        <activity android:name=".activitys.PharmacyList" />
+        <activity android:name=".activitys.Pharmacy" />
+        <activity android:name=".activitys.Turnos"></activity>
     </application>
 
 </manifest>

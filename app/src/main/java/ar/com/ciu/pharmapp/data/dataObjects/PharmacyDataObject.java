@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.PharmacyListPack;
+package ar.com.ciu.pharmapp.data.dataObjects;
 
 /**
  * Created by santi on 6/12/2017.

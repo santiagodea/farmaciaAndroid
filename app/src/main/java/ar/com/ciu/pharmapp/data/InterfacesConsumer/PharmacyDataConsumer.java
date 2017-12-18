@@ -1,4 +1,6 @@
-package ar.com.ciu.pharmapp.PharmacyListPack;
+package ar.com.ciu.pharmapp.data.InterfacesConsumer;
+
+import ar.com.ciu.pharmapp.data.dataObjects.PharmacyDataObject;
 
 /**
  * Created by santi on 12/12/2017.

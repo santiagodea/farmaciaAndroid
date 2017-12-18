@@ -1,12 +1,12 @@
-package ar.com.ciu.pharmapp;
+package ar.com.ciu.pharmapp.activitys;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataProvider;
-import ar.com.ciu.pharmapp.Turnos.data.PharmDataProvider;
+import ar.com.ciu.pharmapp.data.dataProvider.PharmacyDataProvider;
+import ar.com.ciu.pharmapp.R;
 import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 public class Pharmacy extends AppCompatActivity {
