@@ -3,4 +3,5 @@
     <string name="farmacias">Farmacias</string>
     <string name="title_activity_turnos">Turnos</string>
     <string name="aguarde_con">AGUARDE CONEXIÓN</string>
+    <string name="desde_y_hasta_horario">los turnos comienzan y terminan a las 8AM</string>
 </resources>

@@ -34,6 +34,10 @@ public class Turnos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turnos);
 
+
+        getSupportActionBar().setTitle("Farmacias de TURNO");
+        getSupportActionBar().setSubtitle(R.string.desde_y_hasta_horario);
+
         ApplicationToolset.setContext(this);
 
         Intent in = getIntent();
