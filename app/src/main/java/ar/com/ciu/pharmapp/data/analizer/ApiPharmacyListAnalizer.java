@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.PharmacyListPack.analizer;
+package ar.com.ciu.pharmapp.data.analizer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -7,8 +7,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataConsumer;
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
+import ar.com.ciu.pharmapp.data.dataObjects.PharmacyDataObject;
 
 /**
  * Created by santi on 12/12/2017.
@@ -22,8 +21,6 @@ public class ApiPharmacyListAnalizer {
         super();
         this.rawData = _rawData;
     }
-
-
 
     private void doProcessData() {
         this.processedData = new ArrayList<>();

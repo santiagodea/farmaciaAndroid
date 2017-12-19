@@ -6,49 +6,27 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_green_dark"
     android:backgroundTint="@android:color/holo_blue_dark"
-    tools:context="ar.com.ciu.pharmapp.Turnos.Turnos">
-
-    <TextView
-        android:id="@+id/Titulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="serif"
-        android:text="Farmacia De Turno"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
-
-    <TextView
-        android:id="@+id/subtitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="los turnos comienzan y terminan a las 8AM"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+    tools:context="ar.com.ciu.pharmapp.activitys.Turnos">
 
     <TextView
         android:id="@+id/fecha"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="AGUARDE CONECCION"
-        android:textSize="24sp"
+        android:text="@string/aguarde_con"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtitulo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/deTurno"
+        android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -72,31 +50,25 @@
         android:id="@+id/anterior"
         android:layout_width="150dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="216dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Anterior"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.924" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Siguiente"
         android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="216dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.925" />
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toEndOf="@+id/anterior"
+        app:layout_constraintTop_toBottomOf="@+id/listaDeEventos"
+        app:layout_constraintVertical_bias="0.111" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
@@ -116,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deTurno" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <ListView
         android:id="@+id/listaDeEventos"

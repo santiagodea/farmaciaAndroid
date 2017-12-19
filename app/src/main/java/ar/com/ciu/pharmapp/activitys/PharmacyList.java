@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp;
+package ar.com.ciu.pharmapp.activitys;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.ListaDeFarmaciasAdapter;
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataProvider;
+import ar.com.ciu.pharmapp.adapters.ListaDeFarmaciasAdapter;
+import ar.com.ciu.pharmapp.data.dataObjects.PharmacyDataObject;
+import ar.com.ciu.pharmapp.data.dataProvider.PharmacyDataProvider;
+import ar.com.ciu.pharmapp.R;
 import ar.com.ciu.pharmapp.tool.ApplicationToolset;
 
 public class PharmacyList extends AppCompatActivity {

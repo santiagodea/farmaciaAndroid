@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.PharmacyListPack;
+package ar.com.ciu.pharmapp.data.dataObjects;
 
 import java.io.Serializable;
 

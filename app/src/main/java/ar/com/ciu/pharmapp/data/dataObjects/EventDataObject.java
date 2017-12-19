@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.Turnos.data;
+package ar.com.ciu.pharmapp.data.dataObjects;
 
 /**
  * Created by ramiro on 12/12/17.

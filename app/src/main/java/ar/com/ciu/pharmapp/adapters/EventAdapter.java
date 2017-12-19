@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.Turnos;
+package ar.com.ciu.pharmapp.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,15 +11,13 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.PharmacyDataObject;
-import ar.com.ciu.pharmapp.R;
-import ar.com.ciu.pharmapp.Turnos.data.EventDataObject;
+import ar.com.ciu.pharmapp.data.dataObjects.EventDataObject;
 
 /**
  * Created by ramiro on 13/12/17.
  */
 
-class EventAdapter extends ArrayAdapter<EventDataObject>{
+public class EventAdapter extends ArrayAdapter<EventDataObject>{
 
     private LayoutInflater inflater;
 
@@ -34,7 +32,6 @@ class EventAdapter extends ArrayAdapter<EventDataObject>{
         if (convertView == null) {
             convertView = this.inflater.inflate(android.R.layout.simple_list_item_2, parent, false);
         }
-        //TextView whereTextMustBeSet = (TextView) convertView;
 
         View view = super.getView(position, convertView, parent);
         TextView text1 = (TextView) view.findViewById(android.R.id.text1);

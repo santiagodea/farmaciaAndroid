@@ -1,4 +1,4 @@
-package ar.com.ciu.pharmapp.Turnos.data;
+package ar.com.ciu.pharmapp.data.analizer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -6,7 +6,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyListAnalizer;
+import ar.com.ciu.pharmapp.data.dataObjects.EventDataObject;
+import ar.com.ciu.pharmapp.data.dataObjects.IndexDataObject;
 
 /**
  * Created by ramiro on 12/12/17.
@@ -18,17 +19,14 @@ public class PharmDataAnalyzer {
         this.rawData = response;
     }
 
+
     public IndexDataObject getIndexValues(){
         try {
             IndexDataObject result = new IndexDataObject();
             JSONObject dateData = this.rawData.getJSONObject("date");
             JSONArray pharmacysDataArray = this.rawData.getJSONArray("shiftPharmacys");
             JSONArray eventDataArray = this.rawData.getJSONArray("eventData");
-/*
 
-            SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
-            Date d = date.parse(dateData.getString("day") +"/" + dateData.getString("month") + "/" +dateData.getString("year"));
-*/
             //Fecha
             result.setDate(dateData.getString("day") +"/" + dateData.getString("month") + "/" +dateData.getString("year"));
 
@@ -47,8 +45,6 @@ public class PharmDataAnalyzer {
             }
             result.setShiftPharmacys(listPharmacys);*/
 
-
-
             ApiPharmacyListAnalizer pharmListAnalizer = new ApiPharmacyListAnalizer(pharmacysDataArray);
             result.setShiftPharmacys(pharmListAnalizer.getPharmacyList());
 
@@ -66,12 +62,12 @@ public class PharmDataAnalyzer {
             }
             result.setEventData(listEvents);
 
-
-
             return result;
         }
         catch (JSONException e){
             throw new RuntimeException("No se pudo manejar los datos JSON");
         }
     }
+
+
 }

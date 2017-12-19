@@ -1,11 +1,12 @@
-package ar.com.ciu.pharmapp;
+package ar.com.ciu.pharmapp.activitys;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import ar.com.ciu.pharmapp.Turnos.*;
+
+import ar.com.ciu.pharmapp.R;
 
 public class PharmApp extends AppCompatActivity {
 
