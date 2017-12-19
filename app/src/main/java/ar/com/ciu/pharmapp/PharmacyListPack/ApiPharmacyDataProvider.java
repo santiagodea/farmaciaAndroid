@@ -9,11 +9,16 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyDataAnalizer;
 import ar.com.ciu.pharmapp.PharmacyListPack.analizer.ApiPharmacyListAnalizer;
 import ar.com.ciu.pharmapp.Turnos.data.PharmAccept;
 import ar.com.ciu.pharmapp.Turnos.data.PharmDataAnalyzer;
 import ar.com.ciu.pharmapp.tool.ApplicationToolset;
+
+import static java.net.URLEncoder.encode;
 
 /**
  * Created by santi on 14/12/2017.
@@ -44,7 +49,8 @@ public class ApiPharmacyDataProvider extends PharmacyDataProvider {
 
     @Override
     public void fetchPharmacyData(String pharmacyName, PharmacyDataConsumer theFunction) {
-        String url = "https://agile-falls-22343.herokuapp.com/api/farmacia/" + pharmacyName;
+        String name = pharmacyName.replace(" ", "%20");
+        String url = "https://agile-falls-22343.herokuapp.com/api/farmacia/" + name;
         JsonObjectRequest jsObjectRequest = new JsonObjectRequest
                 (url, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -60,6 +66,7 @@ public class ApiPharmacyDataProvider extends PharmacyDataProvider {
                     }
                 });
         ApplicationToolset.toolset().addToRequestQueue(jsObjectRequest);
-    }
 
+
+    }
 }

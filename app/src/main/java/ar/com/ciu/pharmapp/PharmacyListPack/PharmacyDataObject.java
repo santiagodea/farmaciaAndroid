@@ -1,10 +1,13 @@
 package ar.com.ciu.pharmapp.PharmacyListPack;
 
+import java.io.Serializable;
+
 /**
  * Created by santi on 6/12/2017.
  */
 
-public class PharmacyDataObject {
+public class PharmacyDataObject implements Serializable
+{
     private String name;
     private String address;
     private Integer landphone;

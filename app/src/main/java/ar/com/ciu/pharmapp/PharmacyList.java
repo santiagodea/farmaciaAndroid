@@ -38,10 +38,11 @@ public class PharmacyList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // obtengo el objeto a partir de la posicion, OJO hay que pedirselo al listAdapter
                 // ListaDePaisesActivity.this es el "this de afuera"
-               PharmacyDataObject selectedData = PharmacyList.this.listAdapter.getItem(position);
+                PharmacyDataObject selectedData = PharmacyList.this.listAdapter.getItem(position);
 
                 // salto a otra Activity
                 Intent intent = new Intent(PharmacyList.this, Pharmacy.class);
+                //intent.putExtra("pharmacy", selectedData);
                 intent.putExtra("name", selectedData.getName());
                 intent.putExtra("address", selectedData.getAddress());
                 intent.putExtra("landPhone", String.valueOf(selectedData.getLandphone()));
@@ -52,6 +53,7 @@ public class PharmacyList extends AppCompatActivity {
         });
 
     }
+
     public ListaDeFarmaciasAdapter listAdapter() {
         return this.listAdapter;
     }
