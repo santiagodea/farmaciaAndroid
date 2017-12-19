@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    android:backgroundTint="@android:color/holo_blue_dark"
     tools:context="ar.com.ciu.pharmapp.activitys.PharmApp">
 
     <Button
@@ -14,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Turnos"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +29,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Listado de Farmacias"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/turnos" />
@@ -38,6 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Listado de Obras Sociales"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listaFarmacias" />
